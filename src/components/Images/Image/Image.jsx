@@ -5,7 +5,7 @@ const Image = ({ img, openModal }) => {
   // console.log(img);
   const { urls, alt_description } = img;
   return (
-    <li>
+    <li className={s.item}>
       <Tilty>
         <a
           // href={urls.regular}

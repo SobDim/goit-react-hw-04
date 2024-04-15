@@ -1,8 +1,6 @@
-li {
+.item {
     box-sizing: border-box;
-    /* width: 360px; */
     height: 360px;
-    /* width: 360px; */
     display: flex;
     align-items: center;
     justify-content: center;

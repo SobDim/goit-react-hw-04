@@ -61,6 +61,7 @@ function App() {
   return (
     <>
       <SearchBar setQuery={handleChangeQuery} />
+      
       {error && <ErrorMessage />}
 
       {images.length > 0 && <Images images={images} openModal={openModal} />}

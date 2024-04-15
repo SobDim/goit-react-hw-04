@@ -4,7 +4,7 @@ import Image from './Image/Image';
 
 const Images = ({ images, openModal }) => {
   return (
-    <ul>
+    <ul className={s.list}>
       {images.map(img => (
         <Image key={img.id} img={img} openModal={openModal} />
       ))}

@@ -1,4 +1,4 @@
-ul {
+.list {
     display: grid;
     grid-template-columns: repeat(4, 2fr);
     gap: 20px
