@@ -1,26 +1,29 @@
 import { Field, Form, Formik } from 'formik';
+import toast from 'react-hot-toast';
 import { MdOutlineImageSearch } from 'react-icons/md';
-
-import s from '../cards.module.css';
 
 const SearchBar = ({ setQuery }) => {
   const handleSubmit = (data, options) => {
-    setQuery(data.query);
+    if (data.query.trim() === '') {
+      toast('Please enter query!');
+    }
+    setQuery(data.query.trim());
+
+    console.log(data.query);
+
     options.resetForm();
   };
   const initialValues = { query: '' };
+
   return (
     <header>
       <Formik initialValues={initialValues} onSubmit={handleSubmit}>
         <Form>
-          <Field
-            name="query"
-            type="text"
-            // InputProps={<MdOutlineImageSearch />}
-          />
-          {/* <MdOutlineImageSearch /> */}
+          <Field name="query" type="text" />
 
-          {/* <button type="submit">Search</button> */}
+          <button type="submit">
+            <MdOutlineImageSearch />
+          </button>
         </Form>
       </Formik>
     </header>

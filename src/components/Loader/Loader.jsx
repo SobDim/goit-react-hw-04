@@ -1,5 +1,5 @@
 import { Grid } from 'react-loader-spinner';
-import s from '../cards.module.css';
+// import s from '../cards.module.css';
 
 const Loader = () => {
   return (
